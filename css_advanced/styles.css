@@ -275,10 +275,49 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.tutorial-box img {
+.tutorial-box .image-container {
+    position: relative;
     width: 100%;
     height: 200px;
+    overflow: hidden;
+}
+
+.tutorial-box img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+.tutorial-box .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tutorial-box .play-button:hover {
+    background-color: var(--primary-color);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.tutorial-box .play-button i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-left: 3px; /* Slight offset to center the triangle visually */
+}
+
+.tutorial-box .play-button:hover i {
+    color: var(--white);
 }
 
 .tutorial-box h3 {
